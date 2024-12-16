@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Focus-First",
+  "version": "1.0",
+  "description": "An anti-procrastination extension to help you focus on your studies",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "webNavigation",
+    "tabs",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}

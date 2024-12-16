@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus-First</title>
+    <style>
+        body {
+            width: 350px;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 24px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 18px;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 5px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        input:focus {
+            outline: none;
+            border-color: #4dabf7;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4dabf7;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #3c8ce7;
+        }
+        .icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        .button-group button {
+            flex: 1;
+        }
+        #currentTopic, #blockedSitesList {
+            background-color: #fff;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        #blockedSitesList {
+            max-height: 150px;
+            overflow-y: auto;
+        }
+        .blocked-site {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .blocked-site:last-child {
+            border-bottom: none;
+        }
+        .remove-site {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .remove-site:hover {
+            background-color: #ff5252;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎯 Focus-First</h1>
+    <h2>Current Study Topic</h2>
+    <div id="currentTopic"></div>
+    <div class="input-group">
+        <input type="text" id="studyTopic" placeholder="Enter your study topic">
+        <button id="saveTopic">
+            <span class="icon">📚</span> Save Topic
+        </button>
+    </div>
+    <h2>Blocked Sites</h2>
+    <div id="blockedSitesList"></div>
+    <div class="input-group">
+        <input type="text" id="blockSite" placeholder="Enter site to block">
+        <button id="addBlock">
+            <span class="icon">🚫</span> Block Site
+        </button>
+    </div>
+    <div class="input-group">
+        <input type="number" id="breakDuration" placeholder="Break duration (minutes)">
+        <button id="scheduleBreak">
+            <span class="icon">⏱️</span> Schedule Break
+        </button>
+    </div>
+    <div class="input-group">
+        <input type="text" id="emergencyKeyword" placeholder="Set emergency keyword">
+        <button id="setEmergencyKeyword">
+            <span class="icon">🔑</span> Set Emergency Keyword
+        </button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
