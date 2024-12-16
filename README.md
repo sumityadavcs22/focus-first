@@ -14,6 +14,7 @@ Focus Mode: A dedicated focus mode that minimizes distractions and helps you con
 Analytics: Track your productivity and see insights into your working habits.
 
 Technology Stack
+
 Frontend: HTML, CSS, JavaScript
 
 Backend: Node.js
