@@ -2,9 +2,11 @@ Focus First - Anti-Procrastination Web Extension
 
 
 Overview
+
 Focus First is a web extension designed to help users combat procrastination and stay focused on their tasks. This extension leverages modern web technologies such as HTML, CSS, and JavaScript for the frontend, and Node.jsfor the backend, to provide a seamless and interactive experience.
 
 Features
+
 Website Blocking: Temporarily block distracting websites to help you stay focused.
 
 Task List: Create and manage a to-do list to keep track of your tasks and progress.
